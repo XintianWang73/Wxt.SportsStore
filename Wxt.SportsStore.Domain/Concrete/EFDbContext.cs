@@ -8,7 +8,7 @@ using Wxt.SportsStore.Domain.Entities;
 
 namespace Wxt.SportsStore.Domain.Concrete
 {
-    class EFDbContext
+    public class EFDbContext : DbContext
     {
         public DbSet<Product> Products { get; set; }
     }
