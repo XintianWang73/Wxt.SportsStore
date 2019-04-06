@@ -11,7 +11,7 @@ namespace Wxt.SportsStore.WebApp.Controllers
     public class ProductController : Controller
     {
         private IProductsRepository repository;
-        public const int PageSize = 5;
+        public const int PageSize = 10;
 
         public ProductController(IProductsRepository productsRepository)
         {
