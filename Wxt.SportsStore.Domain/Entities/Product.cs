@@ -8,7 +8,7 @@ namespace Wxt.SportsStore.Domain.Entities
 {
     public class Product
     {
-        public int ProductId { get; set; }
+        public int ProductId { get; private set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }

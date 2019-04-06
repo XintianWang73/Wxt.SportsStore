@@ -25,8 +25,7 @@ namespace Wxt.SportsStore.WebApp
             // Set the dependency resolver to be Autofac.
 
             Mock<IProductsRepository> mock = new Mock<IProductsRepository>();
-            mock.Setup(m => m.Products).Returns(new List<Product>
-            {
+            mock.Setup(m => m.Products).Returns(new List<Product>{
                 new Product { Name = "Football", Price = 25 },
                 new Product { Name = "Surf board", Price = 179 },
                 new Product { Name = "Running shoes", Price = 95 }
@@ -35,8 +34,6 @@ namespace Wxt.SportsStore.WebApp
 
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
-
-
         }
     }
 }
