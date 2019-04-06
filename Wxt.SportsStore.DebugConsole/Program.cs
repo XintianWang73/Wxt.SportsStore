@@ -20,7 +20,7 @@ namespace Wxt.SportsStore.DebugConsole
                 {
                     var product = new Product()
                     {
-                        Name = "Products",
+                        Name = "Products"+i,
                         Price = 1m,
                         Description = "aaa",
                         Category = "bbb"
