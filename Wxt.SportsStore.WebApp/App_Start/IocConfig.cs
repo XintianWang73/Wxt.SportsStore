@@ -34,7 +34,13 @@ namespace Wxt.SportsStore.WebApp
             //builder.RegisterInstance<IProductsRepository>(mock.Object).PropertiesAutowired();
 
             builder.RegisterType<EFProductRepository>().As<IProductsRepository>().PropertiesAutowired();
+
+            builder.RegisterType<EmailOrderProcessor>().As<IOrderProcessor>().PropertiesAutowired();
+            builder.RegisterType<EmailSettings>().PropertiesAutowired();
+
             var container = builder.Build();
+
+
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
         }
     }
