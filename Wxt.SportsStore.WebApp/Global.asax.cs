@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Wxt.SportsStore.Domain.Entities;
+using Wxt.SportsStore.WebApp.Infrastructure.Binders;
 
 namespace Wxt.SportsStore.WebApp
 {
@@ -14,6 +16,7 @@ namespace Wxt.SportsStore.WebApp
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             IocConfig.Register();
+            ModelBinders.Binders.Add(typeof(Cart), new CartModelBinder());
         }
     }
 }
