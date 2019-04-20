@@ -15,7 +15,7 @@ namespace Wxt.SportsStore.Domain.Concrete
         public string Password = "password";
         public string ServerName = "smtp.server.com";
         public int ServerPort = 25;
-        public bool WriteAsFile = false;
+        public bool WriteAsFile = true;
         public string FileLocation = @"d:\sports_store_emails";
     }
 }
