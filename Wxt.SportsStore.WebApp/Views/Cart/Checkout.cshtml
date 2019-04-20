@@ -2,11 +2,17 @@
 @{
     ViewBag.Title = "SportStore: Checkout";
 }
+@section scripts{
+    <script src="/scripts/jquery-3.3.1.min.js"></script>
+    <script src="/scripts/jquery.validate.js"></script>
+    <script src="/scripts/jquery.validate.unobtrusive.js"></script>
+}
 <h2>Check out now</h2>
 <p>Please enter your details, and we'll ship your goods right away!</p>
 @using (Html.BeginForm())
 {
     @Html.ValidationSummary()
+
     <h3>Ship to</h3>
     <div class="form-group">
         <label>Name:</label>
@@ -19,7 +25,7 @@
         {
             <div class="form-group">
                 <label>@(property.DisplayName ?? property.PropertyName)</label>
-                @Html.TextBox(property.PropertyName, null, new { @class = "form-control" })
+                @Html.TextBox(property.PropertyName, property.PropertyName, new { @class = "form-control" })
             </div>
         }
     }

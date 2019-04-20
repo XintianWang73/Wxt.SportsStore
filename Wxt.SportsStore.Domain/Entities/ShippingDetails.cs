@@ -20,7 +20,7 @@
 
         [Required(ErrorMessage = "Please enter a state name")]
         public string State { get; set; }
-
+        
         public string Zip { get; set; }
 
         [Required(ErrorMessage = "Please enter a country name")]
