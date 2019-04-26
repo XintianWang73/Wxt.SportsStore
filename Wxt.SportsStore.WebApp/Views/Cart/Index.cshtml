@@ -1,4 +1,5 @@
-﻿@model Wxt.SportsStore.WebApp.Models.CartIndexViewModel
+﻿@using Wxt.SportsStore.Domain.Entities
+@model Wxt.SportsStore.WebApp.Models.CartIndexViewModel
 @{
     ViewBag.Title = "Sports Store: Your Cart";
 }
@@ -13,7 +14,7 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var line in Model.Cart.Lines)
+        @foreach (var line in ((Cart)Session["Cart"]).Lines)
         {
         <tr>
             <td class="text-center">@line.Quantity</td>

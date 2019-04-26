@@ -22,5 +22,17 @@ namespace Wxt.SportsStore.Domain.Entities
         public decimal Price { get; set; }
         [Required(ErrorMessage = "Please specify a category")]
         public string Category { get; set; }
+
+        public Product()
+        {
+        }
+        public Product(Product product)
+        {
+            ProductId = product.ProductId;
+            Name = product.Name;
+            Description = product.Description;
+            Price = product.Price;
+            Category = product.Category;
+        }
     }
 }

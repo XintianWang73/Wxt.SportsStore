@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Wxt.SportsStore.Domain.Abstract;
+using Wxt.SportsStore.Domain.Entities;
 
 namespace Wxt.SportsStore.WebApp.Controllers
 {
@@ -18,6 +19,8 @@ namespace Wxt.SportsStore.WebApp.Controllers
         public PartialViewResult Menu(string category = null)
         {
             ViewBag.SelectedCategory = category;
+            //Cart cart = (Cart)Session["Cart"];
+            //category = (string)ControllerContext.RouteData.Values["category"];
             IEnumerable<string> categories = repository
             .Products
             .Select(x => x.Category)

@@ -11,7 +11,7 @@ namespace Wxt.SportsStore.WebApp.Controllers
     public class ProductController : Controller
     {
         private IProductsRepository repository;
-        public const int PageSize = 10;
+        public int PageSize = 10;
 
         public ProductController(IProductsRepository productsRepository)
         {
@@ -27,7 +27,7 @@ namespace Wxt.SportsStore.WebApp.Controllers
 
         public ViewResult List(string category, int page = 1)
         {
-             ProductsListViewModel model = new ProductsListViewModel
+            ProductsListViewModel model = new ProductsListViewModel
             {
                 Products = repository
                                 .Products
