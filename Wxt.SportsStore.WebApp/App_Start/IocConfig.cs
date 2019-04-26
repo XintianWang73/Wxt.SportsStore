@@ -1,17 +1,12 @@
-﻿using Autofac;
-using Autofac.Integration.Mvc;
-using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using Wxt.SportsStore.Domain.Abstract;
-using Wxt.SportsStore.Domain.Concrete;
-using Wxt.SportsStore.Domain.Entities;
-
-namespace Wxt.SportsStore.WebApp
+﻿namespace Wxt.SportsStore.WebApp
 {
+    using Autofac;
+    using Autofac.Integration.Mvc;
+    using System;
+    using System.Web.Mvc;
+    using Wxt.SportsStore.Domain.Abstract;
+    using Wxt.SportsStore.Domain.Concrete;
+
     //IOC - Inversion of control
     public class IocConfig
     {

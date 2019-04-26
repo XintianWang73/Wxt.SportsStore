@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace Wxt.SportsStore.WebApp.Models
+﻿namespace Wxt.SportsStore.WebApp.Models
 {
+    using System;
+
     public class PagingInfo
     {
         public int TotalItems { get; set; }

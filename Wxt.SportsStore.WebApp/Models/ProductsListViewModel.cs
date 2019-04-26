@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using Wxt.SportsStore.Domain.Entities;
-
-namespace Wxt.SportsStore.WebApp.Models
+﻿namespace Wxt.SportsStore.WebApp.Models
 {
+    using System.Collections.Generic;
+    using Wxt.SportsStore.Domain.Entities;
+
     public class ProductsListViewModel
     {
         public IEnumerable<Product> Products { get; set; }

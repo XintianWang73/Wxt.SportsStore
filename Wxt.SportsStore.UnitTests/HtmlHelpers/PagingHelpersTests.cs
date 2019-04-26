@@ -1,15 +1,9 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Wxt.SportsStore.WebApp.HtmlHelpers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.Mvc;
-using Wxt.SportsStore.WebApp.Models;
-
-namespace Wxt.SportsStore.WebApp.HtmlHelpers.Tests
+﻿namespace Wxt.SportsStore.WebApp.HtmlHelpers.Tests
 {
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using System.Web.Mvc;
+    using Wxt.SportsStore.WebApp.Models;
+
     [TestClass()]
     public class PagingHelpersTests
     {

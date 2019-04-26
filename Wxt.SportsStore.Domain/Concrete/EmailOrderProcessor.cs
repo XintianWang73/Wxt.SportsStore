@@ -1,24 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Net.Mail;
-using System.Text;
-using System.Threading.Tasks;
-using Wxt.SportsStore.Domain.Abstract;
-using Wxt.SportsStore.Domain.Entities;
-
-namespace Wxt.SportsStore.Domain.Concrete
+﻿namespace Wxt.SportsStore.Domain.Concrete
 {
-    public class EmailOrderProcessor : IOrderProcessor
+    using System.IO;
+    using System.Net;
+    using System.Net.Mail;
+    using System.Text;
+    using Wxt.SportsStore.Domain.Abstract;
+    using Wxt.SportsStore.Domain.Entities;
 
+    public class EmailOrderProcessor : IOrderProcessor
     {
         private EmailSettings emailSettings;
+
         public EmailOrderProcessor(EmailSettings settings)
         {
             emailSettings = settings;
         }
+
         public void ProcessOrder(Cart cart, ShippingDetails shippingInfo)
         {
             using (var smtpClient = new SmtpClient())

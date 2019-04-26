@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Wxt.SportsStore.Domain.Entities;
-
-namespace Wxt.SportsStore.Domain.Concrete
+﻿namespace Wxt.SportsStore.Domain.Concrete
 {
+    using System.Data.Entity;
+
+    using Wxt.SportsStore.Domain.Entities;
+
     public class EFDbContext : DbContext
     {
         public DbSet<Product> Products { get; set; }

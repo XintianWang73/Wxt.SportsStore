@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Wxt.SportsStore.Domain.Concrete;
-using Wxt.SportsStore.Domain.Entities;
-
-namespace Wxt.SportsStore.DebugConsole
+﻿namespace Wxt.SportsStore.DebugConsole
 {
-    class Program
+    using Wxt.SportsStore.Domain.Concrete;
+    using Wxt.SportsStore.Domain.Entities;
+
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             using (var ctx = new EFDbContext())
             {
@@ -20,17 +15,16 @@ namespace Wxt.SportsStore.DebugConsole
                 {
                     var product = new Product()
                     {
-                        Name = "Products"+i,
+                        Name = "Products" + i,
                         Price = 1m,
                         Description = "aaa",
                         Category = "bbb"
                     };
-                    ctx.Products.Add(product); 
+                    ctx.Products.Add(product);
                 }
 
                 ctx.SaveChanges();
             }
-            //Console.ReadKey();
         }
     }
 }

@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Web;
-using System.Web.Mvc;
-using Wxt.SportsStore.WebApp.Models;
-
-namespace Wxt.SportsStore.WebApp.HtmlHelpers
+﻿namespace Wxt.SportsStore.WebApp.HtmlHelpers
 {
+    using System;
+    using System.Text;
+    using System.Web.Mvc;
+    using Wxt.SportsStore.WebApp.Models;
+
     public static class PagingHelpers
     {
         public static MvcHtmlString PageLinks(this HtmlHelper html, PagingInfo pagingInfo, Func<int, string> pageUrl)

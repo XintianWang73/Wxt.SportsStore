@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Wxt.SportsStore.Domain.Entities
+﻿namespace Wxt.SportsStore.Domain.Entities
 {
+    using System.Collections.Generic;
+    using System.Linq;
+
     public class Cart
     {
         private List<CartLine> lineCollection = new List<CartLine>();
+
         public void AddItem(Product product, int quantity = 1)
         {
             CartLine line = lineCollection
@@ -37,10 +35,12 @@ namespace Wxt.SportsStore.Domain.Entities
         {
             return lineCollection.Sum(e => e.Product.Price * e.Quantity);
         }
+
         public void Clear()
         {
             lineCollection.Clear();
         }
+
         public IEnumerable<CartLine> Lines
         {
             get { return lineCollection; }

@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Wxt.SportsStore.Domain.Abstract;
-using Wxt.SportsStore.Domain.Entities;
-
-namespace Wxt.SportsStore.Domain.Concrete
+﻿namespace Wxt.SportsStore.Domain.Concrete
 {
-    public class EFProductRepository: IProductsRepository
+    using System.Collections.Generic;
+    using Wxt.SportsStore.Domain.Abstract;
+    using Wxt.SportsStore.Domain.Entities;
+
+    public class EFProductRepository : IProductsRepository
     {
         private EFDbContext _context = new EFDbContext();
 

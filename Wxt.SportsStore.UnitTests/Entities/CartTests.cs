@@ -1,15 +1,8 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Wxt.SportsStore.Domain.Entities;
-
-namespace Wxt.SportsStore.Domain.Entities.Tests
+﻿namespace Wxt.SportsStore.Domain.Entities.Tests
 {
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Wxt.SportsStore.Domain.Entities;
-    using System;
-    using System.Collections.Generic;
     using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
 
     [TestClass()]
     public class CartTests

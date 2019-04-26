@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using Wxt.SportsStore.Domain.Abstract;
-using Wxt.SportsStore.WebApp.Models;
-
-namespace Wxt.SportsStore.WebApp.Controllers
+﻿namespace Wxt.SportsStore.WebApp.Controllers
 {
+    using System.Linq;
+    using System.Web.Mvc;
+    using Wxt.SportsStore.Domain.Abstract;
+    using Wxt.SportsStore.WebApp.Models;
+
     public class ProductController : Controller
     {
         private IProductsRepository repository;

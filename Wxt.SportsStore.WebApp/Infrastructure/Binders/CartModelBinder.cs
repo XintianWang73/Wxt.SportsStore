@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using Wxt.SportsStore.Domain.Entities;
-
-namespace Wxt.SportsStore.WebApp.Infrastructure.Binders
+﻿namespace Wxt.SportsStore.WebApp.Infrastructure.Binders
 {
+    using System.Web.Mvc;
+    using Wxt.SportsStore.Domain.Entities;
+
     public class CartModelBinder : IModelBinder
     {
         private const string sessionKey = "Cart";
