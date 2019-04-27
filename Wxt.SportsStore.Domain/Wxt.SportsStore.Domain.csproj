@@ -92,6 +92,10 @@
     <Compile Include="Migrations\201904271928383_AddLoginUser.Designer.cs">
       <DependentUpon>201904271928383_AddLoginUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904272013449_AddImageToProduct.cs" />
+    <Compile Include="Migrations\201904272013449_AddImageToProduct.Designer.cs">
+      <DependentUpon>201904272013449_AddImageToProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -108,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904271928383_AddLoginUser.resx">
       <DependentUpon>201904271928383_AddLoginUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904272013449_AddImageToProduct.resx">
+      <DependentUpon>201904272013449_AddImageToProduct.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

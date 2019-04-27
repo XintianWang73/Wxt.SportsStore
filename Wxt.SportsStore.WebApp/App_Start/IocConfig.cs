@@ -29,7 +29,7 @@
             //    new Product { Name = "Running shoes", Price = 95 }
             //});
             //builder.RegisterInstance<IProductsRepository>(mock.Object).PropertiesAutowired();
-            //builder.RegisterType<EFDbContext>().PropertiesAutowired();
+            builder.RegisterType<EFDbContext>().PropertiesAutowired();
             builder.RegisterType<EFProductRepository>().As<IProductsRepository>().PropertiesAutowired();
 
             builder.RegisterType<EmailOrderProcessor>().As<IOrderProcessor>().PropertiesAutowired();

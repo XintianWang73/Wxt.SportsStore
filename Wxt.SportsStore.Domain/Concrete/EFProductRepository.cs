@@ -6,7 +6,12 @@
 
     public class EFProductRepository : IProductsRepository
     {
-        private EFDbContext _context = new EFDbContext();
+        private EFDbContext _context;
+
+        public EFProductRepository(EFDbContext context)
+        {
+            _context = context;
+        }
 
         public IEnumerable<Product> Products => _context.Products;
 
@@ -36,6 +41,8 @@
                     dbEntry.Description = product.Description;
                     dbEntry.Price = product.Price;
                     dbEntry.Category = product.Category;
+                    dbEntry.ImageData = product.ImageData;
+                    dbEntry.ImageMimeType = product.ImageMimeType;
                 }
             }
             _context.SaveChanges();

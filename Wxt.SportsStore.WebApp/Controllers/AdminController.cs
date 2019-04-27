@@ -1,6 +1,7 @@
 ﻿namespace Wxt.SportsStore.WebApp.Controllers
 {
     using System.Linq;
+    using System.Web;
     using System.Web.Mvc;
     using Wxt.SportsStore.Domain.Abstract;
     using Wxt.SportsStore.Domain.Entities;
@@ -29,14 +30,16 @@
         }
 
         [HttpPost]
-        public ActionResult Edit(Product product)
+        public ActionResult Edit(Product product, HttpPostedFileBase image = null)
         {
-            if (product.Price>10000)
-            {
-                ModelState.AddModelError("Price", "Too expensive!");
-            }
             if (ModelState.IsValid)
             {
+                if (image != null)
+                {
+                    product.ImageMimeType = image.ContentType;
+                    product.ImageData = new byte[image.ContentLength];
+                    image.InputStream.Read(product.ImageData, 0, image.ContentLength);
+                }
                 repository.SaveProduct(product);
                 TempData["message"] = string.Format("{0} has been saved", product.Name);
                 return RedirectToAction("Index");

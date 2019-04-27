@@ -3,6 +3,7 @@
     using System.Linq;
     using System.Web.Mvc;
     using Wxt.SportsStore.Domain.Abstract;
+    using Wxt.SportsStore.Domain.Entities;
     using Wxt.SportsStore.WebApp.Models;
 
     public class ProductController : Controller
@@ -43,6 +44,21 @@
                 CurrentCategory = category
             };
             return View(model);
+        }
+
+        public FileContentResult GetImage(int productId)
+        {
+            Product prod = repository
+            .Products
+            .FirstOrDefault(p => p.ProductId == productId);
+            if (prod != null)
+            {
+                return File(prod.ImageData, prod.ImageMimeType);
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }
