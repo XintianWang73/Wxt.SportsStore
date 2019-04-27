@@ -5,6 +5,7 @@
     using Wxt.SportsStore.Domain.Abstract;
     using Wxt.SportsStore.Domain.Entities;
 
+    [Authorize]
     public class AdminController : Controller
     {
         private IProductsRepository repository;
@@ -23,6 +24,7 @@
             Product product = repository
             .Products
             .FirstOrDefault(p => p.ProductId == productId);
+            ViewBag.Title = "Edit " + product.Name;
             return View(product);
         }
 
@@ -47,6 +49,7 @@
 
         public ViewResult Create()
         {
+            ViewBag.Title = "Add new product";
             return View("Edit", new Product());
         }
 

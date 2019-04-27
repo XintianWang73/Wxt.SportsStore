@@ -6,6 +6,8 @@
     using System.Web.Mvc;
     using Wxt.SportsStore.Domain.Abstract;
     using Wxt.SportsStore.Domain.Concrete;
+    using Wxt.SportsStore.WebApp.Abstract;
+    using Wxt.SportsStore.WebApp.Concrete;
 
     //IOC - Inversion of control
     public class IocConfig
@@ -32,6 +34,7 @@
 
             builder.RegisterType<EmailOrderProcessor>().As<IOrderProcessor>().PropertiesAutowired();
             builder.RegisterType<EmailSettings>().PropertiesAutowired();
+            builder.RegisterType<DbAuthProvider>().As<IAuthProvider>().PropertiesAutowired();
 
             var container = builder.Build();
 
