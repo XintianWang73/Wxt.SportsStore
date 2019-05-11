@@ -13,7 +13,7 @@
             context.Products.RemoveRange(context.Products);
             context.SaveChanges();
             var random = new Random();
-            for (int i = 0; i < 4000; i++)
+            for (int i = 0; i < 1000; i++)
             {
                 var cate = i / 103 + 1;
                 Product product = new Product

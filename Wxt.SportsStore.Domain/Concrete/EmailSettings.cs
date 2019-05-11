@@ -10,6 +10,6 @@
         public string ServerName = "smtp.server.com";
         public int ServerPort = 25;
         public bool WriteAsFile = true;
-        public string FileLocation = @"d:\sports_store_emails";
+        public string FileLocation = @".\sports_store_emails";
     }
 }
